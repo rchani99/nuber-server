@@ -1,0 +1,9 @@
+type SayByeResponse {
+  error: Boolean!
+  text: String!
+}
+
+type Query {
+  sayBye(name: String!): SayByeResponse!
+  sayHello: String!
+}

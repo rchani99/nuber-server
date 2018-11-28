@@ -6,7 +6,7 @@ import { createConnection } from "typeorm";
 import app from "./app";
 import defaultConnectionOptions from "./ormConfig";
 
-console.log(process.env);
+// console.log(process.env);
 
 const PORT: number | string = process.env.PORT || 4000;
 const PLAYGROUND_ENDPOINT: string = "/playground";

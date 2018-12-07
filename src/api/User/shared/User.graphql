@@ -9,6 +9,7 @@ type User {
   verifiedEmail: Boolean!
   phoneNumber: String
   verifiedPhoneNumber: Boolean!
+  fbId: String
   profilePhoto: String
   fullName: String
   isDriving: Boolean!
@@ -17,7 +18,7 @@ type User {
   lastLng: Float
   lastLat: Float
   lastOrientation: Float
-  chat: chat
+  chat: Chat
   messages: [Message]
   verifications: [Verification]
   ridesAsPassenger: [Ride]

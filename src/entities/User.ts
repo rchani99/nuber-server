@@ -24,9 +24,9 @@ class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: "text", unique: true })
+  @Column({ type: "text", nullable: true })
   @IsEmail()
-  email: string;
+  email: string | null;
 
   @Column({ type: "boolean", default: false })
   verifiedEmail: boolean;
@@ -37,7 +37,7 @@ class User extends BaseEntity {
   @Column({ type: "text" })
   lastName: string;
 
-  @Column({ type: "int" })
+  @Column({ type: "int", nullable: true })
   age: number;
 
   @Column({ type: "text" })
@@ -48,6 +48,9 @@ class User extends BaseEntity {
 
   @Column({ type: "boolean", default: false })
   verifiedPhoneNumber: boolean;
+
+  @Column({ type: "text", nullable: true })
+  fbId: string;
 
   @Column({ type: "text" })
   profilePhoto: string;

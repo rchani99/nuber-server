@@ -1,6 +1,6 @@
-import User from "src/entities/User";
+import User from "../../../entities/User";
 import {
-  FacebookConnectMutaionArgs,
+  FacebookConnectMutationArgs,
   FacebookConnectResponse
 } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
@@ -9,7 +9,7 @@ const resolvers: Resolvers = {
   Mutation: {
     FacebookConnect: async (
       _,
-      args: FacebookConnectMutaionArgs
+      args: FacebookConnectMutationArgs
     ): Promise<FacebookConnectResponse> => {
       const { fbId } = args;
       try {
@@ -18,7 +18,7 @@ const resolvers: Resolvers = {
           return {
             ok: true,
             error: null,
-            token: "Coming soon"
+            token: "Coming soon, Already"
           };
         }
       } catch (error) {
@@ -36,7 +36,7 @@ const resolvers: Resolvers = {
         return {
           ok: true,
           error: null,
-          token: "Coming soon"
+          token: "Coming soon, Created"
         };
       } catch (error) {
         return {

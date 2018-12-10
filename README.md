@@ -6,14 +6,16 @@ Server for the [N]Uber clone. graphQL, TypeScript, NodeJS
 
 ### Public Resolvers:
 
-- [ ] Sign In / Sign Up with Facebook
-- [ ] Sign in whit Email
+- [x] Sign In / Sign Up with Facebook리
+- [x] Sign in whit Email
 - [ ] Start Phone Number Verification
 - [ ] Complete Phone Number Verification
 - [ ] Sign Up with Email
 
 ### Private Resolvers:
 
+- [ ] Generate JWT
+- [ ] Verify JWT
 - [ ] Verify Email
 - [ ] Get my Profile
 - [ ] Update my Profile

@@ -5,10 +5,11 @@ import {
 import User from "../../../entities/User";
 import Verification from "../../../entities/Verification";
 import { Resolvers } from "../../../types/resolvers";
+import createJWT from "../../../utils/createJWT";
 
 const resolvers: Resolvers = {
   Mutation: {
-    CompletePhoneVerificatio: async (
+    CompletePhoneVerification: async (
       _,
       args: CompletePhoneVerificationMutationArgs
     ): Promise<CompletePhoneVerificationResponse> => {
@@ -41,10 +42,11 @@ const resolvers: Resolvers = {
         if (user) {
           user.verifiedPhoneNumber = true;
           user.save();
+          const token = createJWT(user.id);
           return {
             ok: true,
             error: null,
-            token: "Coming soon"
+            token
           };
         } else {
           // Phone 은 인증되었지만 존재하지 않는 사용자일 때, 가입 Form 페이지로 이동

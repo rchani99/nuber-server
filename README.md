@@ -8,14 +8,21 @@ Server for the [N]Uber clone. graphQL, TypeScript, NodeJS
 
 - [x] Sign In / Sign Up with Facebook리
 - [x] Sign in whit Email
-- [ ] Start Phone Number Verification
-- [ ] Complete Phone Number Verification
-- [ ] Sign Up with Email
+- [x] Start Phone Number Verification
+- [x] Complete Phone Number Verification
+- [x] Sign Up with Email
+
+---
+
+### Authentication
+
+- [x] Generate JWT
+- [x] Verify JWT
+
+---
 
 ### Private Resolvers:
 
-- [ ] Generate JWT
-- [ ] Verify JWT
 - [ ] Verify Email
 - [ ] Get my Profile
 - [ ] Update my Profile
@@ -33,6 +40,8 @@ Server for the [N]Uber clone. graphQL, TypeScript, NodeJS
 - [ ] Get Chat Room Messages
 - [ ] Subscribe to Chat Room Messages
 - [ ] Send a Chat Message
+
+---
 
 ### Code Challenge:
 

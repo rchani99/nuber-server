@@ -3,9 +3,11 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn
 } from "typeorm";
+import User from "./User";
 
 @Entity()
 class Place extends BaseEntity {
@@ -13,19 +15,22 @@ class Place extends BaseEntity {
   id: number;
 
   @Column({ type: "text" })
-  name;
+  name: string;
 
   @Column({ type: "double precision", default: 0 })
-  lat;
+  lat: number;
 
   @Column({ type: "double precision", default: 0 })
-  lng;
+  lng: number;
 
   @Column({ type: "text" })
-  address;
+  address: string;
 
   @Column({ type: "boolean", default: false })
-  isFav;
+  isFav: boolean;
+
+  @ManyToOne(() => User, user => user.places)
+  user: User;
 
   @CreateDateColumn()
   createdAt: string;

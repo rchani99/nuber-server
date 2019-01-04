@@ -56,13 +56,13 @@ class User extends BaseEntity {
   profilePhoto: string;
 
   @Column({ type: "boolean", default: false })
-  isDriving;
+  isDriving: boolean;
 
   @Column({ type: "boolean", default: false })
-  isRiding;
+  isRiding: boolean;
 
   @Column({ type: "boolean", default: false })
-  isTaken;
+  isTaken: boolean;
 
   @Column({ type: "double precision", default: 0 })
   lastLng: number;

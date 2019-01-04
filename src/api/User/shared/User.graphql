@@ -3,7 +3,6 @@ type User {
   email: String
   firstName: String!
   lastName: String!
-  facebookID: String!
   age: Int
   password: String
   verifiedEmail: Boolean!

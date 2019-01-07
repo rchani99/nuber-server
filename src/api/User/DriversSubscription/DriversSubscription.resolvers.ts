@@ -14,12 +14,17 @@ const resolvers = {
               lastLng: driverLastLng
             }
           } = payload;
+
+          console.log(user);
+          console.log(payload);
+
           const { lastLat: userLastLat, lastLng: userLastLng } = user;
+
           return (
             driverLastLat >= userLastLat - 0.05 &&
-            driverLastLat <= userLastLng + 0.05 &&
+            driverLastLat <= userLastLat + 0.05 &&
             driverLastLng >= userLastLng - 0.05 &&
-            driverLastLng <= userLastLat + 0.05
+            driverLastLng <= userLastLng + 0.05
           );
         }
       )

@@ -12,6 +12,8 @@ type Ride {
   distance: String!
   passenger: User!
   driver: User!
+  passengerId: Int
+  driverId: Int
   createdAt: String!
   updatedAt: String
 }

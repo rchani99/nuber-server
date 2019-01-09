@@ -99,6 +99,10 @@ type RequestRideResponse {
   ride: Ride
 }
 
+type Subcription {
+  RideStatusSubscription: Ride
+}
+
 type Ride {
   id: Int!
   status: String!
